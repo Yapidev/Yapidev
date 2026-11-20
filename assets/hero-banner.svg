@@ -1,0 +1,139 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Yafy Habibi (@Yapidev) — Full-Stack Developer and Informatics Engineering Student">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070B12"/>
+      <stop offset="55%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#090D18"/>
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0" y1="0" x2="1200" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#1E293B" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.55"/>
+    </linearGradient>
+
+    <linearGradient id="accentLine" x1="0" y1="0" x2="260" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+
+    <linearGradient id="emeraldCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <linearGradient id="indigoCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+
+    <radialGradient id="emeraldGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(180 60) scale(360 220)">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="indigoGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1010 210) scale(360 250)">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="gridPattern" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#94A3B8" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+
+    <radialGradient id="gridFade" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.15"/>
+    </radialGradient>
+
+    <mask id="gridMask">
+      <rect width="1200" height="320" rx="18" fill="url(#gridFade)"/>
+    </mask>
+
+    <clipPath id="cardClip">
+      <rect width="1200" height="320" rx="18"/>
+    </clipPath>
+
+    <style>
+      .sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+      @keyframes pulseRing {
+        0% { transform: scale(1); opacity: 0.75; }
+        70% { transform: scale(2.1); opacity: 0; }
+        100% { transform: scale(2.1); opacity: 0; }
+      }
+      .float-card { animation: floatSlow 6s ease-in-out infinite; }
+      .pulse-dot {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: pulseRing 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#cardClip)">
+    <!-- Base Dark Canvas -->
+    <rect width="1200" height="320" rx="18" fill="url(#bgGrad)"/>
+
+    <!-- Grid Background (nod to Portfolio bg-grid) -->
+    <rect width="1200" height="320" fill="url(#gridPattern)" mask="url(#gridMask)"/>
+
+    <!-- Ambient Glows -->
+    <rect width="1200" height="320" fill="url(#emeraldGlow)"/>
+    <rect width="1200" height="320" fill="url(#indigoGlow)"/>
+
+    <!-- Right-side Geometric Motif (nod to Portfolio HeroSection) -->
+    <g transform="translate(950, 160) rotate(-26)" opacity="0.34">
+      <rect x="-102" y="-96" width="84" height="84" rx="20" fill="url(#emeraldCard)"/>
+      <circle cx="48" cy="-54" r="42" fill="url(#indigoCard)"/>
+      <rect x="-126" y="8" width="84" height="84" rx="20" fill="url(#indigoCard)"/>
+      <circle cx="24" cy="50" r="42" fill="url(#emeraldCard)"/>
+    </g>
+
+    <!-- Floating Developer Spec Card -->
+    <g class="float-card">
+      <rect x="734" y="48" width="412" height="224" rx="14" fill="#0D1322" fill-opacity="0.93" stroke="#1E293B" stroke-width="1.5"/>
+      <circle cx="758" cy="70" r="5" fill="#EF4444" fill-opacity="0.88"/>
+      <circle cx="776" cy="70" r="5" fill="#F59E0B" fill-opacity="0.88"/>
+      <circle cx="794" cy="70" r="5" fill="#10B981" fill-opacity="0.88"/>
+      <text x="1124" y="74" text-anchor="end" fill="#64748B" font-size="11.5" class="mono">yapidev.json</text>
+      <line x1="734" y1="90" x2="1146" y2="90" stroke="#1E293B" stroke-width="1"/>
+
+      <text x="756" y="116" fill="#64748B" font-size="13" class="mono">{</text>
+      <text x="774" y="140" font-size="13" class="mono" xml:space="preserve"><tspan fill="#818CF8">"handle"</tspan><tspan fill="#64748B">: </tspan><tspan fill="#34D399">"@Yapidev"</tspan><tspan fill="#64748B">,</tspan></text>
+      <text x="774" y="164" font-size="13" class="mono" xml:space="preserve"><tspan fill="#818CF8">"school"</tspan><tspan fill="#64748B">: </tspan><tspan fill="#E2E8F0">"PENS Surabaya"</tspan><tspan fill="#64748B">,</tspan></text>
+      <text x="774" y="188" font-size="13" class="mono" xml:space="preserve"><tspan fill="#818CF8">"focus"</tspan><tspan fill="#64748B">:  [</tspan><tspan fill="#34D399">"Full-Stack"</tspan><tspan fill="#64748B">, </tspan><tspan fill="#34D399">"OR-Tools"</tspan><tspan fill="#64748B">, </tspan><tspan fill="#34D399">"AI"</tspan><tspan fill="#64748B">],</tspan></text>
+      <text x="774" y="212" font-size="13" class="mono" xml:space="preserve"><tspan fill="#818CF8">"env"</tspan><tspan fill="#64748B">:    </tspan><tspan fill="#FBBF24">"Linux · Hyprland · Neovim"</tspan><tspan fill="#64748B">,</tspan></text>
+      <text x="774" y="236" font-size="13" class="mono" xml:space="preserve"><tspan fill="#818CF8">"status"</tspan><tspan fill="#64748B">: </tspan><tspan fill="#34D399">"shipping_cool_stuff"</tspan></text>
+      <text x="756" y="256" fill="#64748B" font-size="13" class="mono">}</text>
+    </g>
+
+    <!-- Left Content -->
+    <g>
+      <rect x="58" y="46" width="268" height="28" rx="14" fill="#0B221D" stroke="#10B981" stroke-opacity="0.45" stroke-width="1"/>
+      <circle cx="76" cy="60" r="4.5" fill="#10B981" class="pulse-dot"/>
+      <circle cx="76" cy="60" r="4" fill="#22C55E"/>
+      <text x="90" y="64.5" fill="#6EE7B7" font-size="11.5" font-weight="600" letter-spacing="0.8" class="mono">OPEN TO COLLABORATION &amp; WORK</text>
+    </g>
+
+    <text x="58" y="130" fill="#F8FAFC" font-size="50" font-weight="800" letter-spacing="-1" class="sans">Yafy Habibi</text>
+    <rect x="350" y="94" width="118" height="32" rx="8" fill="#1E1B4B" fill-opacity="0.78" stroke="#6366F1" stroke-opacity="0.55" stroke-width="1"/>
+    <text x="409" y="115" text-anchor="middle" fill="#A5B4FC" font-size="15" font-weight="600" class="mono">@Yapidev</text>
+
+    <rect x="58" y="144" width="260" height="4" rx="2" fill="url(#accentLine)"/>
+
+    <text x="58" y="185" fill="#E2E8F0" font-size="20" font-weight="500" class="sans">Full-Stack Engineer · Optimization &amp; AI Systems</text>
+    <text x="58" y="215" fill="#94A3B8" font-size="15" font-weight="400" class="sans">Informatics Engineering @ PENS  ·  Probolinggo, Indonesia</text>
+
+    <g>
+      <rect x="58" y="242" width="590" height="36" rx="10" fill="#0F172A" fill-opacity="0.9" stroke="#1E293B" stroke-width="1"/>
+      <text x="76" y="264.5" font-size="13" class="mono" xml:space="preserve"><tspan fill="#10B981" font-weight="700">$</tspan><tspan fill="#64748B"> stack </tspan><tspan fill="#818CF8">→ </tspan><tspan fill="#CBD5E1">Next.js · TypeScript · Python · FastAPI · OR-Tools · Bash</tspan></text>
+    </g>
+  </g>
+
+  <rect x="0.75" y="0.75" width="1198.5" height="318.5" rx="17.25" stroke="url(#borderGrad)" stroke-width="1.5"/>
+</svg>
