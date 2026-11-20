@@ -118,9 +118,7 @@ def graph_repos_stars(count_type, owner_affiliation, cursor=None, total_stars=0)
                     node {
                         ... on Repository {
                             nameWithOwner
-                            stargazers {
-                                totalCount
-                            }
+                            stargazerCount
                         }
                     }
                 }
@@ -135,7 +133,7 @@ def graph_repos_stars(count_type, owner_affiliation, cursor=None, total_stars=0)
     data = simple_request(graph_repos_stars.__name__, query, variables)['data']['user']['repositories']
     if count_type == 'repos':
         return data['totalCount']
-    total_stars += sum(edge['node']['stargazers']['totalCount'] for edge in data['edges'])
+    total_stars += sum(edge['node']['stargazerCount'] for edge in data['edges'] if edge and edge.get('node'))
     if data['pageInfo']['hasNextPage']:
         return graph_repos_stars(count_type, owner_affiliation, data['pageInfo']['endCursor'], total_stars)
     return total_stars
